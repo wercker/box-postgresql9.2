@@ -8,15 +8,8 @@
     },
     "version" : "9.2",
     "enable_pgdg_apt" : true,
-    "dir" : "/etc/postgresql/9.2/main",
-    "config" : { 
-      "data_directory" : "/var/lib/postgresql/9.2/main",
-      "hba_file" : "/etc/postgresql/9.2/main/pg_hba.conf",
-      "ident_file" : "/etc/postgresql/9.2/main/pg_ident.conf",
-      "external_pid_file" : "/var/run/postgresql/9.2-main.pid",
-      "ssl_key_file" : "/etc/ssl/private/ssl-cert-snakeoil.key",
-      "ssl_cert_file" : "/etc/ssl/certs/ssl-cert-snakeoil.pem" },
-    "client" : { "packages": ["postgresql-client-9.2"] }
+    "dir" : "/var/lib/postgresql/9.2/main",
+    "server" : { "packages": ["postgresql-9.2"] }
 
   },
   "run_list":[
