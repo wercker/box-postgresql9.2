@@ -8,7 +8,7 @@
     },
     "version" : "9.2",
     "enable_pgdg_apt" : true,
-    "dir" : "/var/lib/postgresql/9.2/main",
+    "dir" : "/etc/postgresql/9.2/main",
     "server" : { "packages": ["postgresql-9.2"] },
     "ssl" : false,
     "config" : { "listen_address" : "*"},
