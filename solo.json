@@ -11,7 +11,15 @@
     "dir" : "/etc/postgresql/9.2/main",
     "server" : { "packages": ["postgresql-9.2"] },
     "ssl" : false,
-    "config" : { "listen_addresses" : "*"},
+    "config" : { 
+      "listen_addresses" : "*",
+      "ssl_key_file" : "/etc/ssl/private/ssl-cert-snakeoil.key",
+      "ssl_cert_file" : "/etc/ssl/certs/ssl-cert-snakeoil.pem",
+      "data_directory" : "/var/lib/postgresql/9.2/main",
+      "hba_file" : "/etc/postgresql/9.2/main/pg_hba.conf",
+      "ident_file" : "/etc/postgresql/9.2/main/pg_ident.conf",
+      "external_pid_file" : "/var/run/postgresql/9.2-main.pid"
+      },
     "pg_hba" : [
       { "comment" : "# wercker: allow all", 
       "type" : "host" , "db" :"all", "user" : "all", "addr" : "0.0.0.0/0", "method" : "md5"},
