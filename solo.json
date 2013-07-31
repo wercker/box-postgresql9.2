@@ -11,7 +11,7 @@
     "dir" : "/etc/postgresql/9.2/main",
     "server" : { "packages": ["postgresql-9.2"] },
     "ssl" : false,
-    "config" : { "listen_address" : "*"},
+    "config" : { "listen_addresses" : "*"},
     "pg_hba" : [
       { "comment" : "# wercker: allow all", 
       "type" : "host" , "db" :"all", "user" : "all", "addr" : "0.0.0.0/0", "method" : "md5"},
