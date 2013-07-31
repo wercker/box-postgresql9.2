@@ -13,7 +13,7 @@ script: |
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
   sudo apt-get install postgresql-contrib
   export PGPASSWORD=wercker
-  echo "CREATE DATABASE werckerdb1;" | psql -U postgres
+  echo "CREATE DATABASE werckerdb1;" | psql -U postgres -h 127.0.0.1
   
 env:
   WERCKER_POSTGRESQL_USERNAME: postgres
