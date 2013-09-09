@@ -14,8 +14,6 @@ script: |
   rm -rf  /etc/postgresql
   rm -rf /etc/postgresql-common
   rm -rf /var/lib/postgresql
-  userdel -r postgres
-  groupdel postgres
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
   sudo apt-get install  postgresql-contrib-9.2
